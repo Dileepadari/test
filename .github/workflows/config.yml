@@ -3,7 +3,7 @@ name: Add New File
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   addFile:
