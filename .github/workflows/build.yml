@@ -40,8 +40,10 @@ jobs:
         git commit -m "gh page link added"
         git push origin dev
         git -C ${{ github.workspace }} commit -m "https://virtual-labs.github.io/${{ github.repository }}/dev click on the link to test your code."
-        
-    - uses: ad-m/github-push-action@master
+      
+    - name: pages
+      if: contains(github.event.head_commit.message, 'build')
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
         force: true

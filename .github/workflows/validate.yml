@@ -3,8 +3,8 @@ name: Validate
 on:
   push:
     branches:
-        main
-
+      main
+      
 jobs:
   lint:
     name: Lint Code Base
