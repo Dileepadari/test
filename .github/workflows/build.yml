@@ -38,7 +38,7 @@ jobs:
         "https://virtual-labs.github.io/${{ github.repository }}/dev" > link.txt
         git add link.txt
         git commit -m "gh page link added"
-        git push origin dev
+        git push origin main
         git -C ${{ github.workspace }} commit -m "https://virtual-labs.github.io/${{ github.repository }}/dev click on the link to test your code."
       
     - name: pages
